@@ -1,0 +1,13 @@
+{
+    "footer": {
+        "copyright": "© 2019 INCIBE"
+    },
+    "login": {
+        "form": {
+            "password": "Password",
+            "submit": "Login",
+            "username": "UserName",
+            "error": "Incorrect username or password"
+        }
+    }
+}
