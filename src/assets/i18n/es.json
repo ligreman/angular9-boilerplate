@@ -1,6 +1,6 @@
 {
     "footer": {
-        "copyright": "© 2019 INCIBE"
+        "copyright": "© 2019"
     },
     "login": {
         "form": {
@@ -9,5 +9,6 @@
             "username": "Nombre de usuario",
             "error": "Nombre de usuario o contraseña incorrecta"
         }
-    }
+    },
+    "clave": "Esta es la clave"
 }

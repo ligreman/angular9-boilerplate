@@ -1,8 +1,12 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
+@import "scss/FontsAndIcons";
+@import "scss/scrollbar";
+@import "scss/main";
+@import "scss/colors";
+@import "scss/overrides";
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -21,12 +25,52 @@ $miapp-warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $miapp-theme: mat-light-theme($miapp-primary, $miapp-accent, $miapp-warn);
 
+
+// Insert custom background color
+$background: map-get($miapp-theme, background);
+$background: map_merge(
+        $background,
+        (
+            background: map_get($mat-blue-gray, 900)
+        )
+);
+$miapp-theme: map_merge(
+        $miapp-theme,
+        (
+            background: $background
+        )
+);
+
+$custom-typography: mat-typography-config(
+    $font-family: 'Open Sans, Calibri, sans-serif',
+    $headline: mat-typography-level(32px, 48px, 700),
+    $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@mixin mix-app-theme($miapp-theme) {
+    $accent: map-get($miapp-theme, accent);
+
+    .mat-button-toggle {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .mat-button-toggle.mat-button-toggle-checked {
+        background-color: mat-color($accent);
+
+        .mat-button-toggle-label-content {
+            color: $dark-primary-text;
+        }
+    }
+
+    .mat-datepicker-content {
+        background: $miapp-background-light;
+    }
+}
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
+@include mat-core($custom-typography);
 @include angular-material-theme($miapp-theme);
+@include mix-app-theme($miapp-theme);
 
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

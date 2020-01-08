@@ -1,0 +1,61 @@
+@import "colors";
+
+/* Angular Material Overrides */
+
+/* Toastr Overrides */
+.toast-container .ngx-toastr {
+    box-shadow: none;
+}
+
+/* TimePicker */
+.timepicker-dial__item_active {
+    color: $miapp-background-light !important;
+    background-color: #9ba3a7 !important
+}
+
+.timepicker-hint-custom {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+.timepicker-cancel-button {
+    margin-right: 15px !important;
+}
+
+.timepicker-container {
+    display: flex !important;
+    border-bottom: 1px solid $input-color;
+    margin-right: 5px;
+}
+
+.timepicker-container input {
+    background: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.timepicker-container input:focus {
+    outline: none;
+}
+
+.timepicker-container input::placeholder {
+    color: $input-color;
+}
+
+.ngx-material-timepicker-toggle.timepicker-icon button svg {
+    fill: $white !important;
+}
+
+.datepicker-center {
+    text-align: center !important;
+    max-width: 40% !important;
+}
+
+.timepicker-center {
+    text-align: center !important;
+    width: 60px !important;
+}
+
+ngx-material-timepicker-container {
+    z-index: 1001;
+}
