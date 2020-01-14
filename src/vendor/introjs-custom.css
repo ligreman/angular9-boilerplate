@@ -1,0 +1,71 @@
+.introjs-helperLayer {
+    border: none;
+    box-shadow: none;
+}
+
+.introjs-helperNumberLayer {
+    box-shadow: none;
+    border-color: #E73137;
+}
+
+.introjs-tooltip.width300 {
+    width: 300px;
+    max-width: 300px;
+}
+
+.introjs-tooltip.width400 {
+    width: 400px;
+    max-width: 400px;
+}
+
+.introjs-tooltip.width500 {
+    width: 500px;
+    max-width: 500px;
+}
+
+.introjs-tooltip.width600 {
+    width: 600px;
+    max-width: 600px;
+}
+
+.introjs-tooltipbuttons .introjs-button {
+    box-shadow: none;
+    font-weight: normal;
+    text-shadow: none;
+    border: 0;
+    border-radius: 0;
+    background: #4B5C66;
+    font: 0.8em 'Open Sans', sans-serif;
+    margin: 5px 3px 0 3px;
+}
+
+.introjs-tooltipbuttons .introjs-button:hover {
+    background: #4B5C66;
+}
+
+.introjs-tooltipbuttons .introjs-button.introjs-disabled {
+    background: #68757E;
+}
+
+.introjs-tooltipbuttons .introjs-button.introjs-skipbutton {
+    background: transparent;
+    color: #1976D2 !important;
+}
+
+.introjs-overlay {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.introjs-tooltiptext ul {
+    list-style: initial;
+    margin: .5em 0 .5em 2em;
+}
+
+.introjs-tooltiptext p {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.introjs-fixParent {
+    position: relative !important;
+}

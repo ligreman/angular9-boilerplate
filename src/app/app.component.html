@@ -599,11 +599,12 @@ message.service.spec.ts get started with your project! * * * * * * * * -->
 
 <p>
     {{ myDate | amTimeAgo}}
-    <button mat-raised-button color="primary">Primary</button>
+    <button id="step3" mat-raised-button color="primary">Primary</button>
 </p>
 
 <p>
     <mat-checkbox>Check me!</mat-checkbox>
+    <a href='http://example.com/' data-hint='Hello step one!'></a>
 </p>
 
 <mat-paginator [length]="100"
@@ -612,7 +613,7 @@ message.service.spec.ts get started with your project! * * * * * * * * -->
 </mat-paginator>
 
 <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-<p><i class="fas fa-user"></i></p>
+<p class="step4"><i class="fas fa-user"></i></p>
 <p><i class="far fa-user"></i></p>
 
 <router-outlet></router-outlet>
