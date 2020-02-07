@@ -32,7 +32,7 @@ export class CustomTranslateLoaderService implements TranslateLoader {
             .pipe(
                 catchError(_ => {
                     // En caso de error (o no estar autenticado) cojo el fichero local de traducciones
-                    return this.httpClient.get('/assets/i18n/' + lang + '.json');
+                    return this.httpClient.get('./assets/i18n/' + lang + '.json');
                 })
             );
     }

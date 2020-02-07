@@ -29,41 +29,41 @@ $miapp-theme: mat-light-theme($miapp-primary, $miapp-accent, $miapp-warn);
 // Insert custom background color
 $background: map-get($miapp-theme, background);
 $background: map_merge(
-        $background,
-        (
-            background: map_get($mat-blue-gray, 900)
-        )
+    $background,
+    (
+      background: map_get($mat-blue-gray, 900)
+    )
 );
 $miapp-theme: map_merge(
-        $miapp-theme,
-        (
-            background: $background
-        )
+    $miapp-theme,
+    (
+      background: $background
+    )
 );
 
 $custom-typography: mat-typography-config(
-    $font-family: 'Open Sans, Calibri, sans-serif',
-    $headline: mat-typography-level(32px, 48px, 700),
-    $body-1: mat-typography-level(16px, 24px, 500)
+  $font-family: 'Open Sans, Calibri, sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
 );
 
 @mixin mix-app-theme($miapp-theme) {
-    $accent: map-get($miapp-theme, accent);
+  $accent: map-get($miapp-theme, accent);
 
-    .mat-button-toggle {
-        background: rgba(0, 0, 0, 0.2);
-    }
-    .mat-button-toggle.mat-button-toggle-checked {
-        background-color: mat-color($accent);
+  .mat-button-toggle {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .mat-button-toggle.mat-button-toggle-checked {
+    background-color: mat-color($accent);
 
-        .mat-button-toggle-label-content {
-            color: $dark-primary-text;
-        }
+    .mat-button-toggle-label-content {
+      color: $dark-primary-text;
     }
+  }
 
-    .mat-datepicker-content {
-        background: $miapp-background-light;
-    }
+  .mat-datepicker-content {
+    background: $miapp-background-light;
+  }
 }
 
 // Include theme styles for core and each component used in your app.
@@ -72,5 +72,4 @@ $custom-typography: mat-typography-config(
 @include mat-core($custom-typography);
 @include angular-material-theme($miapp-theme);
 @include mix-app-theme($miapp-theme);
-
 

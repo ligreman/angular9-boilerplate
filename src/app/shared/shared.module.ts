@@ -8,8 +8,15 @@ import { AngularMaterialModule } from './angular-material.module';
  */
 @NgModule({
     declarations: [],
-    imports: [CommonModule, AngularMaterialModule],
-    exports: [CommonModule, AngularMaterialModule, TranslateModule]
+    imports: [
+        AngularMaterialModule,
+        CommonModule
+    ],
+    exports: [
+        AngularMaterialModule,
+        CommonModule,
+        TranslateModule
+    ]
 })
 export class SharedModule {
 }
